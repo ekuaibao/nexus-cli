@@ -144,7 +144,7 @@ options:
     -s, --server     <url>       Specify nexus server url.
     -u, --username   <username>  Specify username.
     -p, --password   <password>  Specify password.
-    -r, --repository <name>      Specify name of repoistory.
+    -r, --repository <name>      Specify name of repository.
     -f, --filter     <pattern>   Add filter pattern, 
                                  repositories/components which match all patterns are listed.
                                  Support multiple --filter flags.
