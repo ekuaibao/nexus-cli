@@ -357,7 +357,7 @@ function fetchComponents (baseURL, auth, repository, filters, number) {
     if (token) {
       qs.continuationToken = token
     }
-    return request('GET', baseURL + '/beta/components', qs, {
+    return request('GET', `${baseURL}/beta/components`, qs, {
       'Authorization': auth
     }).then(resp => {
       process.stdout.write('.')
@@ -436,7 +436,7 @@ function deleteComponents (baseURL, auth, repository, filters, number) {
     }
   }
 
-  return fetchComponents(auth, repository, filters, number).then(arr => {
+  return fetchComponents(baseURL, auth, repository, filters, number).then(arr => {
     if (arr.length > 0) {
       arr.forEach(v => {
         console.log(`${v.group}:${v.name}:${v.version}`)
